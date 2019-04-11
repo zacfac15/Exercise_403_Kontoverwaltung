@@ -19,4 +19,14 @@ public class Account
   {
     balance -= money;
   }
+
+  public double getBalance()
+  {
+    return balance;
+  }
+
+  public void setBalance(double balance)
+  {
+    this.balance = balance;
+  }
 }

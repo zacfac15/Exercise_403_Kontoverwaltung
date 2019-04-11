@@ -105,9 +105,9 @@ public class GUI extends javax.swing.JFrame
   {//GEN-HEADEREND:event_jMenuItem1ActionPerformed
     int[] indi = jtList.getSelectedIndices();
     
+    AccountUser[] au = new AccountUser[indi.length];
     for (int i = 0; i < indi.length; i++)
     {
-      AccountUser[] au = new AccountUser[indi.length];
       au[i] = new AccountUser();
       new Thread(au[i],lm.getUsername(indi[i])).start();
     }
