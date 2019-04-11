@@ -1,4 +1,7 @@
-package uiimport javax.swing.JOptionPane;
+package ui;
+
+import com.sun.org.apache.bcel.internal.generic.AALOAD;
+import javax.swing.JOptionPane;
 import user.AccountUser;
 import user.ListModel;
 
@@ -68,7 +71,6 @@ public class GUI extends javax.swing.JFrame
     jPanel4.setPreferredSize(new java.awt.Dimension(120, 60));
     jPanel4.setLayout(new java.awt.GridLayout(1, 1));
 
-    jtList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
     jtList.setComponentPopupMenu(jPopupMenu1);
     jtList.setSize(new java.awt.Dimension(39, 70));
     jScrollPane2.setViewportView(jtList);
@@ -106,8 +108,8 @@ public class GUI extends javax.swing.JFrame
     for (int i = 0; i < indi.length; i++)
     {
       AccountUser[] au = new AccountUser[indi.length];
-      
-      new Thread(au[i],lm.getUsername(indi[i]));
+      au[i] = new AccountUser();
+      new Thread(au[i],lm.getUsername(indi[i])).start();
     }
   }//GEN-LAST:event_jMenuItem1ActionPerformed
 

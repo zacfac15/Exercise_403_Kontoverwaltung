@@ -10,12 +10,6 @@ public class AccountUser implements Runnable
   private String username;
   private JTextArea taLog;
 
-  public AccountUser(Account account, String username, JTextArea taLog)
-  {
-    this.username = username;
-    this.account = account;
-    this.taLog = taLog;
-  }
 
   public String getUsername()
   {
@@ -31,7 +25,11 @@ public class AccountUser implements Runnable
   @Override
   public void run()
   {
-    
+    for (int i = 0; i <10; i++)
+    {
+      
+      System.out.println(""+i+Thread.currentThread().getName());
+    }
   }
   
     private void log(String logText)
