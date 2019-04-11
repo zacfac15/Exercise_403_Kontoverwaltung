@@ -3,30 +3,30 @@ package data;
 public class Account
 {
 
-  private int amount = 0;
+  private int balance = 0;
 
-  public Account(int amount)
+  public Account(int balance)
   {
-    this.amount = amount;
+    this.balance = balance;
   }
 
   public int getAmount()
   {
-    return amount;
+    return balance;
   }
 
   public void setAmount(int amount)
   {
-    this.amount = amount;
+    this.balance = amount;
   }
 
   public void deposit(int money)
   {
-    amount += money;
+    balance += money;
   }
 
   public void withdraw(int money)
   {
-    amount -= money;
+    balance -= money;
   }
 }
