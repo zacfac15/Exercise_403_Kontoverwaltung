@@ -3,7 +3,7 @@ package data;
 public class Account
 {
 
-  private double balance = 0;
+  private double balance = 50;
 
   public Account(double balance)
   {
